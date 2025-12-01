@@ -8,7 +8,7 @@ Banks and financial institutions are incurring significant losses due to vehicle
 - Train a machine learning model to assist banks in making better loan approval decisions.
 
 ### Insights:
-- Datasets in csv & worksheet format can be found [here](Datasets)
+- Datasets in csv & worksheet format can be found [here](Dataset)
 - Python script can be found [here](Vehicle%20Loans.ipynb)
 
 ### Key Tasks as a DBA:
