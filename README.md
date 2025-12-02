@@ -24,38 +24,39 @@ Banks and financial institutions are incurring significant losses due to vehicle
 
 1. **Employment Type & Default Behavior**
    
-The analysis shows that self-employed borrowers default slightly more than salaried borrowers, but the difference is minor (22.7% vs. 20.3%).
-This suggests employment type is not a strong standalone predictor.
+      The analysis shows that self-employed borrowers default slightly more than salaried borrowers, but the            difference is minor (22.7% vs. 20.3%).
+      This suggests employment type is not a strong standalone predictor.
 
 2. **Target Variable Imbalance**
 
-The data is heavily skewed toward non-defaulters (78% non-default vs. 22% default).
-This imbalance directly caused early logistic regression models to classify almost everything as “non-default.”
+      The data is heavily skewed toward non-defaulters (78% non-default vs. 22% default).
+      This imbalance directly caused early logistic regression models to classify almost everything as “non-            default.”
 
 3. **Branch, Supplier & Manufacturer Analysis**
 
-- Default Rate by Top 10 Branch_id
-Branch_id 36 shows the highest default rate at around 29%, indicating the loans associated with this branch have the highest risk of default, followed by branch_id 16 at around 28% of default risk. On the lower side, branch_id 19 indicates the lowest risk of default at around 16%.
-
-- Default Rate by Top 10 State_id
-
-State_id 13 has the highest default rate at around 31%, indicating this state’s borrowers are more likely to default compared to others. The second highest default rate is for State_id 14, with nearly 28%, also showing elevated risk. Other states such as State_id 8, 9, 6, 7, 4, 5, 3, and 1 show moderate default rates ranging between roughly 17.5% to 23%. State_id 1 has the lowest default rate among these top 10, around 17.5%, indicating relatively better loan performance in this region.
-
-- Default Rate by Supplier_id
+   - *Default Rate by Top 10 Branch_id*
   
-Supplier_id 18317 shows the highest default rate, around 33.7%, indicating that loans associated with this supplier have the highest risk of default. Supplier_id 21980 and 15694 also exhibit relatively high default rates, around 30% and 29.7%, respectively, suggesting these suppliers' borrowers tend to default more frequently. 
+     Branch_id 36 shows the highest default rate at around 29%, indicating the loans associated with this branch       have the highest risk of default, followed by branch_id 16 at around 28% of default risk. On the lower side,      branch_id 19 indicates the lowest risk of default at around 16%.
 
-On the lower end, Supplier_id 14375 has the lowest default rate at about 11.7%, indicating better credit performance for loans from this supplier. Other suppliers like 14234, 15663, and 14145 have default rates in the 22-25% range, reflecting moderate risk.
+   - *Default Rate by Top 10 State_id*
 
-Supplier_id 18166 stands out with a notably low default rate of approximately 15.1%, suggesting better borrower quality or more effective risk management practices.
+     State_id 13 has the highest default rate at around 31%, indicating this state’s borrowers are more likely to      default compared to others. The second highest default rate is for State_id 14, with nearly 28%, also             showing elevated risk. Other states such as State_id 8, 9, 6, 7, 4, 5, 3, and 1 show moderate default rates       ranging between roughly 17.5% to 23%. State_id 1 has the lowest default rate among these top 10, around           17.5%, indicating relatively better loan performance in this region.
+
+   - *Default Rate by Supplier_id*
   
-- Default Rate by Manufacturer_id
+      Supplier_id 18317 shows the highest default rate, around 33.7%, indicating that loans associated with this        supplier have the highest risk of default. Supplier_id 21980 and 15694 also exhibit relatively high default       rates, around 30% and 29.7%, respectively, suggesting these suppliers' borrowers tend to default more             frequently. 
 
-Manufacturer_id 153 exhibits the highest default rate, approximately 33.5%, indicating this manufacturer’s associated loans carry the greatest risk of default. Several manufacturers, including 48, 45, 49, 51, 67, 86, and 120, show default rates clustered in the 20-27% range, reflecting moderate default risk.
+      On the lower end, Supplier_id 14375 has the lowest default rate at about 11.7%, indicating better credit          performance for loans from this supplier. Other suppliers like 14234, 15663, and 14145 have default rates         in the 22-25% range, reflecting moderate risk.
 
-Notably, Manufacturer_id 152 shows a default rate of zero or close to zero, which is an anomaly and warrants further investigation—this could be due to insufficient data, misclassification, or truly excellent repayment performance.
+      Supplier_id 18166 stands out with a notably low default rate of approximately 15.1%, suggesting better            borrower quality or more effective risk management practices.
+  
+   - *Default Rate by Manufacturer_id*
 
-The manufacturer with the lowest default rate (excluding 152) is 145, at around 20%, suggesting better loan performance relative to others.
+      Manufacturer_id 153 exhibits the highest default rate, approximately 33.5%, indicating this manufacturer’s        associated loans carry the greatest risk of default. Several manufacturers, including 48, 45, 49, 51, 67,         86, and 120, show default rates clustered in the 20-27% range, reflecting moderate default risk.
+
+      Notably, Manufacturer_id 152 shows a default rate of zero or close to zero, which is an anomaly and               warrants further investigation—this could be due to insufficient data, misclassification, or truly                excellent repayment performance.
+
+      The manufacturer with the lowest default rate (excluding 152) is 145, at around 20%, suggesting better loan       performance relative to others.
 
 4. **Age and Default Patterns**
 
