@@ -64,11 +64,11 @@ Ages 31-45 seem to be most active, which makes sense - they are typically in the
 
 This implies that while age has an impact, it might not be linear. Consider interaction terms with other features (income, employment type, etc.) could improve predictive model.
 
-9. **ID Proof Usage**
+5. **ID Proof Usage**
 
 As Mobile No. has the record of 233154, customers in dataset provided, this proof ID seems to be mandatory for the loan approval. The Adhar card is the most popular choice among customers, followed by Voter Id and PAN card. Passport is the least common proof of ID.
 
-10. **Credit Score (CNS) as a Risk Indicator**
+6. **Credit Score (CNS) as a Risk Indicator**
 
 Very Low Risk shows the lowest and most expected default rate, followed by Low Risk, which also performs safely. The Inactive group has an unexpectedly low default rate, suggesting an unusual but relatively safe segment. Medium Risk and the “insufficient history” not-scored group show similar, moderate risk levels, while High Risk and especially Very High Risk exhibit the highest default rates as expected. 
 
@@ -76,11 +76,11 @@ Customers with no bureau history fall in the mid-risk range, slightly riskier th
 
 Other not-scored categories generally fall into the moderate range, with the “no update in 36 months” group performing better than expected. The “50+ active accounts” category shows a perfect non-default rate, but this is almost certainly due to a very small and unreliable sample.
 
-11. **Primary vs. Secondary Account Behavior**
+7. **Primary vs. Secondary Account Behavior**
 
 Customers with 0 primary accounts show a very high default rate (56%), indicating a risky profile—likely borrowers with no independent credit history who still appear on multiple secondary accounts, suggesting financial exposure without full repayment responsibility. Across the rest of the table, default rates generally range from 11% to 28%, decreasing as the number of primary accounts increases, and often remaining low or decreasing with fewer secondary accounts. The bottom-right cell is zero, which likely means there were no observed defaults or no data in that highest primary-and-secondary-account combination.
 
-12. **Sanctioned vs. Disbursed Amount**
+8. **Sanctioned vs. Disbursed Amount**
 
 | Account Type           | Mean Sanctioned Amount | Mean Disbursed Amount |
 | ---------------------- | ---------------------- | --------------------- |
@@ -89,11 +89,11 @@ Customers with 0 primary accounts show a very high default rate (56%), indicatin
 
 Based on the mean values, there is only a very small difference between the  amounts sanctioned and the amounts actually disbursed for both primary and secondary account loans, indicating minimal deduction or adjustment between approval and actual disbursement. However, the distributions are highly skewed, especially for primary loans. This skewness is clear from the median being zero and the large standard deviation, indicating that while most customers receive little or no sanctioned amount, a small number receive very large amounts.
 
-13. **Number of Inquiries**
+9. **Number of Inquiries**
 
 The correlation between the number of inquiries and loan default is 0.0437, indicating a very weak positive relationship. This means the number of inquiries on its own has almost no linear predictive power for default. However, the effect of inquiries may still appear in non-linear patterns or in combination with other factors such as income, credit history, or existing loan exposure, which is common in credit risk modelling.
 
-14. **Credit History Features**
+10. **Credit History Features**
 
 | Feature                         | NEW_ACCTS_IN_LAST_6M | DELINQUENT_ACCTS_IN_6M | CREDIT_HISTORY_LENGTH | AVERAGE_ACCT_AGE | loan_default |
 | ------------------------------- | -------------------- | ---------------------- | --------------------- | ---------------- | ------------ |
@@ -109,7 +109,7 @@ The correlation between the number of inquiries and loan default is 0.0437, indi
 - Slight positive correlation between *delinquent accounts* and *default* (0.0345) aligns with intuition but remains very weak.
 - Slight negative correlation of *credit history length* and *average account age* with *default* suggests longer histories marginally reduce default risk.
 
-15.  **Predictive Modeling Observations**
+11.  **Predictive Modeling Observations**
 
 <img width="886" height="804" alt="image" src="https://github.com/user-attachments/assets/f25a9712-f664-4ca2-943e-d221076db199" />
 
