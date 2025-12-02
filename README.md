@@ -95,8 +95,8 @@ Banks and financial institutions are incurring significant losses due to vehicle
 
 10. **Credit History Features**
 
-   | Feature                         | NEW_ACCTS_IN_LAST_6M | DELINQUENT_ACCTS_IN_6M | CREDIT_HISTORY_LENGTH |       AVERAGE_ACCT_AGE | loan_default |
-   | ------------------------------- | -------------------- | ---------------------- | --------------------- | ---   ------------- | ------------ |
+| Feature                         | NEW_ACCTS_IN_LAST_6M | DELINQUENT_ACCTS_IN_6M | CREDIT_HISTORY_LENGTH |       AVERAGE_ACCT_AGE | loan_default |
+| ------------------------------- | -------------------- | ---------------------- | --------------------- | ----------- | ------------ |
    | **NEW_ACCTS_IN_LAST_6M**        | 1.0000               | 0.1828                 | 0.2001                |       0.0334           | -0.0294      |
    | **DELINQUENT_ACCTS_IN_LAST_6M** | 0.1828               | 1.0000                 | 0.2622                |       0.1713           | 0.0345       |
    | **CREDIT_HISTORY_LENGTH**       | 0.2001               | 0.2622                 | 1.0000                |       0.8320           | -0.0421      |
