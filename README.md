@@ -113,17 +113,12 @@ Banks and financial institutions are incurring significant losses due to vehicle
 
 <img width="886" height="804" alt="image" src="https://github.com/user-attachments/assets/f25a9712-f664-4ca2-943e-d221076db199" />
 
-All feature correlations with loan_default are very close to zero (around 0.03 or -0.03), indicating no strong linear relationship between these categorical or ID-like features and loan default.
-
-Features like branch_id, supplier_id, Current_pincode_ID, and Employment_Type show some moderate correlations among themselves (up to about 0.21), which suggests possible grouping or clustering patterns but not directly predictive of default.
-
-UniqueID, manufacturer_id, and loan_default have near-zero correlations with other features, meaning they are largely independent.
-
-Since all feature correlations with the target (loan_default) are very weak, these features alone are unlikely to be strong predictors in a linear model.
-
-This suggests that either more relevant features need to be included, or that non-linear models and feature engineering (e.g., encoding categories better, creating interaction terms) will be necessary to improve predictive power.
-
-Features like IDs and categorical variables may need to be transformed carefully (e.g., target encoding, embeddings) rather than used as-is.
+- All feature correlations with loan_default are very close to zero (around 0.03 or -0.03), indicating no strong linear relationship between these categorical or ID-like features and loan default.
+- Features like branch_id, supplier_id, Current_pincode_ID, and Employment_Type show some moderate correlations among themselves (up to about 0.21), which suggests possible grouping or clustering patterns but not directly predictive of default.
+- UniqueID, manufacturer_id, and loan_default have near-zero correlations with other features, meaning they are largely independent.
+- Since all feature correlations with the target (loan_default) are very weak, these features alone are unlikely to be strong predictors in a linear model.
+- This suggests that either more relevant features need to be included, or that non-linear models and feature engineering (e.g., encoding categories better, creating interaction terms) will be necessary to improve predictive power.
+- Features like IDs and categorical variables may need to be transformed carefully (e.g., target encoding, embeddings) rather than used as-is.
 
 ### Executive Summary – Vehicle Loan Default Analysis
 
