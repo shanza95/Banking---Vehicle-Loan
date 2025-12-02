@@ -60,48 +60,48 @@ Banks and financial institutions are incurring significant losses due to vehicle
 
 4. **Age and Default Patterns**
 
-Ages 31-45 seem to be most active, which makes sense - they are typically in their prime working years, with stable income. Younger (<19) and older (>61) borrowers may have fewer loans and potentially lower default rates. This could be due to lower borrowing activity, more conservative borrowing behavior, or financial support structures (like parents, or pensions).
+   Ages 31-45 seem to be most active, which makes sense - they are typically in their prime working years, with      stable income. Younger (<19) and older (>61) borrowers may have fewer loans and potentially lower default         rates. This could be due to lower borrowing activity, more conservative borrowing behavior, or financial          support structures (like parents, or pensions).
 
-This implies that while age has an impact, it might not be linear. Consider interaction terms with other features (income, employment type, etc.) could improve predictive model.
+   This implies that while age has an impact, it might not be linear. Consider interaction terms with other          features (income, employment type, etc.) could improve predictive model.
 
 5. **ID Proof Usage**
 
-As Mobile No. has the record of 233154, customers in dataset provided, this proof ID seems to be mandatory for the loan approval. The Adhar card is the most popular choice among customers, followed by Voter Id and PAN card. Passport is the least common proof of ID.
+   As Mobile No. has the record of 233154, customers in dataset provided, this proof ID seems to be mandatory for    the loan approval. The Adhar card is the most popular choice among customers, followed by Voter Id and PAN        card. Passport is the least common proof of ID.
 
 6. **Credit Score (CNS) as a Risk Indicator**
 
-Very Low Risk shows the lowest and most expected default rate, followed by Low Risk, which also performs safely. The Inactive group has an unexpectedly low default rate, suggesting an unusual but relatively safe segment. Medium Risk and the “insufficient history” not-scored group show similar, moderate risk levels, while High Risk and especially Very High Risk exhibit the highest default rates as expected. 
+   Very Low Risk shows the lowest and most expected default rate, followed by Low Risk, which also performs          safely. The Inactive group has an unexpectedly low default rate, suggesting an unusual but relatively safe        segment. Medium Risk and the “insufficient history” not-scored group show similar, moderate risk levels,          while High Risk and especially Very High Risk exhibit the highest default rates as expected. 
 
-Customers with no bureau history fall in the mid-risk range, slightly riskier than low-risk groups. This group needs a close attention to find the cause of the outcome, which might be due to new-to-credit customers, or unscored due to data mismatch.
+   Customers with no bureau history fall in the mid-risk range, slightly riskier than low-risk groups. This group    needs a close attention to find the cause of the outcome, which might be due to new-to-credit customers, or       unscored due to data mismatch.
 
-Other not-scored categories generally fall into the moderate range, with the “no update in 36 months” group performing better than expected. The “50+ active accounts” category shows a perfect non-default rate, but this is almost certainly due to a very small and unreliable sample.
+   Other not-scored categories generally fall into the moderate range, with the “no update in 36 months” group       performing better than expected. The “50+ active accounts” category shows a perfect non-default rate, but this    is almost certainly due to a very small and unreliable sample.
 
 7. **Primary vs. Secondary Account Behavior**
 
-Customers with 0 primary accounts show a very high default rate (56%), indicating a risky profile—likely borrowers with no independent credit history who still appear on multiple secondary accounts, suggesting financial exposure without full repayment responsibility. Across the rest of the table, default rates generally range from 11% to 28%, decreasing as the number of primary accounts increases, and often remaining low or decreasing with fewer secondary accounts. The bottom-right cell is zero, which likely means there were no observed defaults or no data in that highest primary-and-secondary-account combination.
+   Customers with 0 primary accounts show a very high default rate (56%), indicating a risky profile—likely          borrowers with no independent credit history who still appear on multiple secondary accounts, suggesting          financial exposure without full repayment responsibility. Across the rest of the table, default rates             generally range from 11% to 28%, decreasing as the number of primary accounts increases, and often remaining      low or decreasing with fewer secondary accounts. The bottom-right cell is zero, which likely means there were     no observed defaults or no data in that highest primary-and-secondary-account combination.
 
 8. **Sanctioned vs. Disbursed Amount**
 
-| Account Type           | Mean Sanctioned Amount | Mean Disbursed Amount |
-| ---------------------- | ---------------------- | --------------------- |
-| **Primary Accounts**   | 218,503.9              | 218,065.9             |
-| **Secondary Accounts** | 7,295.9                | 7,180.0               |
+   | Account Type           | Mean Sanctioned Amount | Mean Disbursed Amount |
+   | ---------------------- | ---------------------- | --------------------- |
+   | **Primary Accounts**   | 218,503.9              | 218,065.9             |
+   | **Secondary Accounts** | 7,295.9                | 7,180.0               |
 
-Based on the mean values, there is only a very small difference between the  amounts sanctioned and the amounts actually disbursed for both primary and secondary account loans, indicating minimal deduction or adjustment between approval and actual disbursement. However, the distributions are highly skewed, especially for primary loans. This skewness is clear from the median being zero and the large standard deviation, indicating that while most customers receive little or no sanctioned amount, a small number receive very large amounts.
+   Based on the mean values, there is only a very small difference between the  amounts sanctioned and the          amounts actually disbursed for both primary and secondary account loans, indicating minimal deduction or          adjustment between approval and actual disbursement. However, the distributions are highly skewed, especially     for primary loans. This skewness is clear from the median being zero and the large standard deviation,            indicating that while most customers receive little or no sanctioned amount, a small number receive very large    amounts.
 
 9. **Number of Inquiries**
 
-The correlation between the number of inquiries and loan default is 0.0437, indicating a very weak positive relationship. This means the number of inquiries on its own has almost no linear predictive power for default. However, the effect of inquiries may still appear in non-linear patterns or in combination with other factors such as income, credit history, or existing loan exposure, which is common in credit risk modelling.
+   The correlation between the number of inquiries and loan default is 0.0437, indicating a very weak positive       relationship. This means the number of inquiries on its own has almost no linear predictive power for default.    However, the effect of inquiries may still appear in non-linear patterns or in combination with other factors     such as income, credit history, or existing loan exposure, which is common in credit risk modelling.
 
 10. **Credit History Features**
 
-| Feature                         | NEW_ACCTS_IN_LAST_6M | DELINQUENT_ACCTS_IN_6M | CREDIT_HISTORY_LENGTH | AVERAGE_ACCT_AGE | loan_default |
-| ------------------------------- | -------------------- | ---------------------- | --------------------- | ---------------- | ------------ |
-| **NEW_ACCTS_IN_LAST_6M**        | 1.0000               | 0.1828                 | 0.2001                | 0.0334           | -0.0294      |
-| **DELINQUENT_ACCTS_IN_LAST_6M** | 0.1828               | 1.0000                 | 0.2622                | 0.1713           | 0.0345       |
-| **CREDIT_HISTORY_LENGTH**       | 0.2001               | 0.2622                 | 1.0000                | 0.8320           | -0.0421      |
-| **AVERAGE_ACCT_AGE**            | 0.0334               | 0.1713                 | 0.8320                | 1.0000           | -0.0248      |
-| **loan_default**                | -0.0294              | 0.0345                 | -0.0421               | -0.0248          | 1.0000       |
+   | Feature                         | NEW_ACCTS_IN_LAST_6M | DELINQUENT_ACCTS_IN_6M | CREDIT_HISTORY_LENGTH |       AVERAGE_ACCT_AGE | loan_default |
+   | ------------------------------- | -------------------- | ---------------------- | --------------------- | ---   ------------- | ------------ |
+   | **NEW_ACCTS_IN_LAST_6M**        | 1.0000               | 0.1828                 | 0.2001                |       0.0334           | -0.0294      |
+   | **DELINQUENT_ACCTS_IN_LAST_6M** | 0.1828               | 1.0000                 | 0.2622                |       0.1713           | 0.0345       |
+   | **CREDIT_HISTORY_LENGTH**       | 0.2001               | 0.2622                 | 1.0000                |       0.8320           | -0.0421      |
+   | **AVERAGE_ACCT_AGE**            | 0.0334               | 0.1713                 | 0.8320                |       1.0000           | -0.0248      |
+   | **loan_default**                | -0.0294              | 0.0345                 | -0.0421               |       -0.0248          | 1.0000       |
 
 - *New accounts and delinquent accounts in the last 6 months* are moderately correlated (0.18), suggesting customers opening more new accounts may also have more delinquencies.
 - *Credit history length* and *average account age* are highly correlated (0.83), as expected—they both reflect the length of credit experience.
