@@ -120,7 +120,7 @@ Banks and financial institutions are incurring significant losses due to vehicle
 - This suggests that either more relevant features need to be included, or that non-linear models and feature engineering (e.g., encoding categories better, creating interaction terms) will be necessary to improve predictive power.
 - Features like IDs and categorical variables may need to be transformed carefully (e.g., target encoding, embeddings) rather than used as-is.
 
-### Executive Summary – Vehicle Loan Default Analysis
+## Executive Summary – Vehicle Loan Default Analysis
 
 This project analyzes over 233,000 vehicle loan applications to identify the key factors influencing loan default and support the development of a predictive risk model. The dataset is highly imbalanced, with 78% non-defaulters and 22% defaulters, requiring careful handling for modeling.
 
